@@ -1,0 +1,59 @@
+/* Reprend la palette de l'application, y compris le thème sombre :
+   quelqu'un qui arrive ici depuis l'app ne doit pas avoir l'impression
+   d'avoir changé de site. */
+:root{
+  --bg:#F7F3EC; --surface:#FFFFFF; --ink:#1A1C21; --ink-soft:#5D6168;
+  --line:#E6DFD3; --accent:#D2452F; --accent-tint:#FBEAE6;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#15171B; --surface:#1E2127; --ink:#EDE9E2; --ink-soft:#A3A5AC;
+    --line:#2E323A; --accent:#E4573F; --accent-tint:#2E211F;
+  }
+}
+
+*{ box-sizing:border-box }
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  /* La marge latérale évite que le texte touche le bord sur téléphone. */
+  padding:0 18px 64px;
+}
+main{ max-width:720px; margin:0 auto }
+
+header{
+  display:flex; align-items:center; gap:12px;
+  padding:32px 0 8px; border-bottom:1px solid var(--line); margin-bottom:32px;
+}
+header .logo{
+  width:44px; height:44px; border-radius:12px; background:var(--accent);
+  display:flex; align-items:center; justify-content:center; flex:0 0 auto;
+}
+header .nom{ font-size:24px; font-weight:700; font-style:italic; letter-spacing:-.01em }
+header .langues{ margin-left:auto; font-size:14px }
+header .langues a{ color:var(--ink-soft); text-decoration:none; padding:4px 8px; border-radius:8px }
+header .langues a:hover{ background:var(--accent-tint); color:var(--accent) }
+header .langues a[aria-current]{ color:var(--accent); font-weight:600 }
+
+h1{ font-size:30px; line-height:1.25; margin:0 0 6px; letter-spacing:-.02em }
+.maj{ color:var(--ink-soft); font-size:14px; margin:0 0 32px }
+h2{ font-size:20px; margin:36px 0 10px; letter-spacing:-.01em }
+h3{ font-size:16px; margin:24px 0 6px }
+p, li{ color:var(--ink) }
+a{ color:var(--accent) }
+
+.resume{
+  background:var(--surface); border:1px solid var(--line); border-radius:16px;
+  padding:20px 22px; margin:0 0 8px;
+}
+.resume p:first-child{ margin-top:0 }
+.resume p:last-child{ margin-bottom:0 }
+
+table{ border-collapse:collapse; width:100%; margin:12px 0; font-size:15px }
+th, td{ text-align:start; padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top }
+th{ color:var(--ink-soft); font-weight:600 }
+
+footer{
+  margin-top:48px; padding-top:20px; border-top:1px solid var(--line);
+  color:var(--ink-soft); font-size:14px;
+}

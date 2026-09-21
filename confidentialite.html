@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politique de confidentialité — Notaru</title>
+<meta name="description" content="Ce que Notaru fait, et ne fait pas, de tes enregistrements, de tes notes et de ta clé.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+</head>
+<body>
+<main>
+
+<header>
+  <span class="logo"><img src="logo.svg" alt="" width="28" height="28"></span>
+  <span class="nom">Notaru</span>
+  <nav class="langues">
+    <a href="confidentialite.html" aria-current="page">FR</a>
+    <a href="privacy.html">EN</a>
+  </nav>
+</header>
+
+<h1>Politique de confidentialité</h1>
+<p class="maj">Dernière mise à jour : 21 septembre 2026</p>
+
+<div class="resume">
+  <p><strong>Notaru n'a ni compte, ni serveur, ni traceur.</strong> Tes
+  enregistrements, tes notes et ta clé restent sur ton téléphone.</p>
+  <p>La seule chose qui quitte l'appareil est l'audio que tu enregistres,
+  envoyé au service de transcription <em>que tu as toi-même configuré avec
+  ta propre clé</em>, puis le texte obtenu pour en rédiger les notes.</p>
+  <p>Nous — l'auteur de l'application — ne recevons rien. Aucune donnée ne
+  nous parvient, jamais.</p>
+</div>
+
+<h2>Qui publie cette application</h2>
+<p>Notaru est développée et publiée par un développeur indépendant. Pour
+toute question relative à cette politique ou à tes données :
+<a href="mailto:cntctari@gmail.com">cntctari@gmail.com</a>.</p>
+
+<h2>Ce qui reste sur ton téléphone</h2>
+<table>
+  <tr><th>Donnée</th><th>Où elle vit</th></tr>
+  <tr><td>Les enregistrements audio</td><td>Stockage privé de l'application, effacés au fur et à mesure (voir plus bas)</td></tr>
+  <tr><td>Les transcriptions et les notes</td><td>Stockage privé de l'application</td></tr>
+  <tr><td>Ta clé d'API</td><td>Chiffrée par le coffre-fort d'Android (<code>EncryptedSharedPreferences</code>)</td></tr>
+  <tr><td>Tes préférences</td><td>Stockage privé de l'application</td></tr>
+</table>
+<p>La sauvegarde automatique d'Android est <strong>désactivée</strong> pour
+cette application. Rien n'est donc copié vers Google Drive ni transféré
+vers un nouvel appareil à ton insu. Si tu veux déplacer tes données, tu
+dois le faire explicitement depuis les réglages de l'application, et le
+fichier produit <strong>ne contient jamais ta clé</strong>.</p>
+
+<h2>Ce qui est envoyé, à qui, et pourquoi</h2>
+<p>La transcription et la rédaction des notes demandent une puissance de
+calcul qu'un téléphone n'a pas. Elles sont donc confiées à un service
+externe, que tu choisis dans les réglages et pour lequel tu fournis ta
+propre clé :</p>
+<ul>
+  <li><strong>Groq</strong> (par défaut) — <a href="https://groq.com/privacy-policy/">politique de confidentialité</a></li>
+  <li><strong>OpenAI</strong> (au choix) — <a href="https://openai.com/policies/privacy-policy/">politique de confidentialité</a></li>
+</ul>
+<p>Deux choses leur sont transmises : les extraits audio, pour être
+transcrits, puis le texte de la transcription, pour en tirer un résumé et
+un plan. <strong>Rien d'autre ne quitte l'appareil</strong> — ni identifiant,
+ni position, ni contact, ni information sur le téléphone.</p>
+<p>La relation contractuelle pour ces envois est <strong>entre toi et ce
+service</strong>, puisque c'est ta clé et ton compte qui sont utilisés. Au
+21 septembre 2026, Groq indique ne pas entraîner ses modèles sur les
+données envoyées à son API et ne pas les conserver par défaut. Ces
+politiques leur appartiennent et peuvent changer : les liens ci-dessus font
+foi, pas cette page.</p>
+
+<h2>Effacement des extraits audio</h2>
+<p>Chaque extrait audio est supprimé du téléphone dès que sa transcription
+a abouti. S'il échoue — réseau coupé, service indisponible — il est
+<em>conservé</em> et réessayé plus tard, y compris après redémarrage de
+l'application : le supprimer ferait perdre définitivement ce passage. Il
+disparaît dès que la transcription réussit.</p>
+
+<h2>Ce que l'application ne fait pas</h2>
+<ul>
+  <li>Aucun compte, aucune inscription, aucune identité.</li>
+  <li>Aucune mesure d'audience, aucune télémétrie, aucun rapport de plantage.</li>
+  <li>Aucune publicité, aucun traceur publicitaire, aucun identifiant de publicité.</li>
+  <li>Aucun kit de développement tiers collectant des données.</li>
+  <li>Aucune vente ni partage de données à des fins commerciales.</li>
+  <li>Aucune écoute en dehors des enregistrements que tu démarres toi-même.</li>
+</ul>
+
+<h2>Autorisations demandées</h2>
+<table>
+  <tr><th>Autorisation</th><th>Pourquoi</th></tr>
+  <tr><td>Microphone</td><td>Enregistrer ce que tu demandes à enregistrer. C'est la fonction même de l'application.</td></tr>
+  <tr><td>Notifications</td><td>Afficher la notification d'enregistrement. Elle est obligatoire : sans elle, Android coupe le micro dès que l'écran s'éteint.</td></tr>
+  <tr><td>Service de premier plan (microphone)</td><td>Poursuivre l'enregistrement écran éteint ou application en arrière-plan.</td></tr>
+  <tr><td>Maintien de l'appareil éveillé</td><td>Empêcher le processeur de s'endormir pendant un enregistrement.</td></tr>
+  <tr><td>Internet</td><td>Envoyer l'audio au service de transcription que tu as configuré.</td></tr>
+</table>
+
+<h2>Enfants</h2>
+<p>Notaru ne s'adresse pas aux enfants de moins de 13 ans et ne collecte
+sciemment aucune donnée les concernant. Comme aucune donnée ne nous
+parvient, aucun profil n'est constitué, quel que soit l'utilisateur.</p>
+
+<h2>Supprimer tes données</h2>
+<p>Tout est sur ton téléphone, donc tout part avec lui :</p>
+<ul>
+  <li><strong>Réglages → Supprimer toutes mes données</strong> efface
+  enregistrements, notes et clé de cet appareil, immédiatement et sans
+  retour possible.</li>
+  <li><strong>Désinstaller l'application</strong> produit le même effet.</li>
+</ul>
+<p>Nous n'avons rien à supprimer de notre côté : nous n'avons rien. Pour
+les données déjà transmises à Groq ou à OpenAI, la demande est à adresser à
+ce service, avec lequel c'est ton compte qui est engagé.</p>
+
+<h2>Modifications</h2>
+<p>Toute modification de cette politique sera publiée sur cette page, avec
+une nouvelle date de mise à jour. Un changement touchant à ce qui sort de
+l'appareil sera signalé dans l'application.</p>
+
+<footer>
+  <p>Notaru — <a href="mailto:cntctari@gmail.com">cntctari@gmail.com</a><br>
+  <a href="privacy.html">This page in English</a></p>
+</footer>
+
+</main>
+</body>
+</html>
